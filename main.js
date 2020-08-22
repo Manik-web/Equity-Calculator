@@ -1,6 +1,7 @@
 const initValue = 150000;
-const currentValue = 149999;
-//const mortgageEquityGain;
+const currentValue = 176000;
+const initMortgage = 142500;
+const remMortgage = 136323;
 
 
 let propertyGain = (initValue, currentValue) =>{
@@ -14,6 +15,21 @@ let propertyGain = (initValue, currentValue) =>{
        // gain = abs(gain);
         console.log(`Unfortunately, you have lost £${Math.abs(gain)} in equity`);
     }
+    return gain;
 }
 
-propertyGain(initValue, currentValue);
+
+
+let mortgageGain = (initMortgage, remMortgage) =>{
+    let morGain = initMortgage - remMortgage;
+    console.log(`You have paid off £${morGain} of your mortgage so far`);
+    return morGain;
+}
+
+
+let totalGain = (equity, mortgage) =>{
+    deposit = equity+mortgage;
+    console.log(`In total you have £${deposit} in equity in your property`);
+}
+
+totalGain((propertyGain(initValue, currentValue)),(mortgageGain(initMortgage, remMortgage)));
