@@ -1,3 +1,31 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
 }
+header{
+    text-align:center;
+    margin:auto;
+    background:grey;
+}
+
+#details{
+    width:50%;
+    background:grey;
+    padding-top:30px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+#initValue, #currentValue, #initMort, #currentMort{
+    width: 80%;
+    margin:auto;
+    padding-bottom:30px;
+
+}
+
+#initValue-label, #currentValue-label, #initMort-label, #currentMort-label{
+    width:77%;
+    margin:auto;
+    padding-bottom:10px;
+    padding-top:10px;
+}
