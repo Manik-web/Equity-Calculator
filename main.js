@@ -2,6 +2,7 @@ const initValue = 150000;
 const currentValue = 176000;
 const initMortgage = 142500;
 const remMortgage = 136323;
+const initDeposit = initValue-initMortgage;
 
 
 let propertyGain = (initValue, currentValue) =>{
@@ -28,7 +29,7 @@ let mortgageGain = (initMortgage, remMortgage) =>{
 
 
 let totalGain = (equity, mortgage) =>{
-    deposit = equity+mortgage;
+    deposit = equity+mortgage+initDeposit
     console.log(`In total you have £${deposit} in equity in your property`);
 }
 
