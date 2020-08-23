@@ -1,11 +1,17 @@
 html{
     font-family: Arial, Helvetica, sans-serif;
+    background-image:linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url("https://www.elvetestates.co.uk/themes/elvet_estates/images/xproperties-hero.jpg.pagespeed.ic.S0NSaacl3w.jpg");
+    background-size:cover;
+    color: white;
 }
 header{
     width:50%;
     text-align:center;
     margin:auto;
     background:grey;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    background:rgba(27, 27, 50, 0.8);
 }
 
 #details{
@@ -15,6 +21,7 @@ header{
     margin:auto;
     display:flex;
     flex-direction:column;
+    background:rgba(27, 27, 50, 0.8);
 }
 
 #initValue, #currentValue, #initMort, #currentMort{
@@ -44,4 +51,8 @@ input[type=number] {
 #submit{
     margin:auto;
     margin-bottom: 15px;
+    background: gold;
+    color: black;
+    width: 10%;
+    font-size:14pt;
 }
