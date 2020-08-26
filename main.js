@@ -1,5 +1,5 @@
 const initValue = 150000;
-const currentValue = 176000;
+const currentValue = 170000;
 const initMortgage = 142500;
 const remMortgage = 136323;
 const initDeposit = initValue-initMortgage;
