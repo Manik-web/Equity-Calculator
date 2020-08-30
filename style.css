@@ -28,7 +28,8 @@ header{
     width: 80%;
     margin:auto;
     margin-bottom:20px;
-
+    font-size:20pt;
+   
 }
 
 #initValue-label, #currentValue-label, #initMort-label, #currentMort-label{
@@ -37,6 +38,7 @@ header{
     padding-bottom:10px;
     padding-top:10px;
     font-size: 14pt;
+   
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -53,6 +55,12 @@ input[type=number] {
     margin-bottom: 15px;
     background: gold;
     color: black;
-    width: 10%;
+    min-width: 10%;
     font-size:14pt;
+}
+
+@media only screen and (max-width: 600px) {
+    .details {
+      width:100%;
+  }
 }

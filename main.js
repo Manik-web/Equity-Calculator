@@ -1,9 +1,26 @@
-const initValue = 150000;
-const currentValue = 170000;
+let initValue;
+let currentValue;
+let initMortgage;
+let remMortgage;
+let initDeposit;
+
+function getValues() {
+    initValue = document.getElementById("initValue").value;
+    currentValue = document.getElementById('currentValue').value;
+    initMortgage = document.getElementById("initMort").value;
+    remMortgage = document.getElementById('currentMort').value;
+    initDeposit = initValue-initMortgage;
+}
+
+
+console.log(initDeposit);
+
+//const initValue = prompt('Enter intial property price');//50000;
+/*const currentValue =70000;
 const initMortgage = 142500;
 const remMortgage = 136323;
-const initDeposit = initValue-initMortgage;
-
+;
+//console.log('link successful');
 //calculate the gain in property from prop prices
 let propertyGain = (initValue, currentValue) =>{
     let gain = currentValue - initValue;
@@ -28,7 +45,10 @@ let mortgageGain = (initMortgage, remMortgage) =>{
 //calculate the total gain including the initial mortgage
 let totalGain = (equity, mortgage) =>{
     deposit = equity+mortgage+initDeposit
-    console.log(`In total you have £${deposit} in equity in your property`);
+    alert(`In total you have £${deposit} in equity in your property`);
+    return deposit;
 }
-
-totalGain((propertyGain(initValue, currentValue)),(mortgageGain(initMortgage, remMortgage)));
+/*
+let propGain = propertyGain(initValue, currentValue);
+let mortGain = mortgageGain(initMortgage,remMortgage);
+let depo = totalGain(propGain,mortGain);*/
