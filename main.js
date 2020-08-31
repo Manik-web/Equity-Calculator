@@ -5,6 +5,7 @@ let remMortgage;
 let initDeposit;
 let propGain;
 let mortGain;
+let depoisit;
 
 function getValues() {
     initValue = document.getElementById("initValue").value;
@@ -16,7 +17,8 @@ function getValues() {
     propGain=propertyGain(initValue, currentValue);
     mortGain=mortgageGain(initMortgage, remMortgage);
     
-    totalGain(propGain, mortGain);
+    deposit = totalGain(propGain, mortGain);
+    displayResult(deposit);
 
 }
 
@@ -44,6 +46,28 @@ let mortgageGain = (initMortgage, remMortgage) =>{
 //calculate the total gain including the initial mortgage
 let totalGain = (equity, mortgage) =>{
     deposit = equity+mortgage+initDeposit
-    alert(`In total you have £${deposit} in equity in your property`);
+    
     return deposit;
 }
+
+function displayResult (deposit){
+    console.log('results incoming');
+    const details = document.querySelector('#details');
+    const result = document.createElement('div');
+    result.classList.add('result');
+
+    const resultHeadline = document.createElement('h2');
+    resultHeadline.style.cssText = 'color:white; text-align:center';
+    resultHeadline.innerText = 'Here are your results!';
+
+    const resultMessage = document.createElement('p');
+    resultMessage.style.cssText = 'color:white; text-size:1rem; margin-left:20px;'
+    resultMessage.innerText = `You currently have £${deposit} available in equity.
+     Combine it with savings to work out a potential deposit on a new property`;
+
+    result.style.cssText = "background:rgba(27, 27, 50,0.8); font-size:2rem;"
+    details.appendChild(result);
+    result.appendChild(resultHeadline);
+    result.appendChild(resultMessage);
+
+;}
