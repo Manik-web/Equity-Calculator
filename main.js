@@ -71,3 +71,33 @@ function displayResult (deposit){
     result.appendChild(resultMessage);
 
 ;}
+
+//testing the monthly payments section
+let mortgageAmount = 244450;
+let interestRate = 1.8;
+let intCalc = interestRate/1200;
+let loanTerm = 33;
+
+let intRate = 1+intCalc;
+let calc1 = Math.pow(intRate,(loanTerm*12));
+let calc2 = Math.pow(intRate,(loanTerm*12))-1;
+console.log(calc1,calc2);
+
+let monthlyRepayment = ((mortgageAmount*interestRate)/1200)*(calc1/calc2);
+console.log(monthlyRepayment);
+
+let debt = mortgageAmount;
+let monthEquity = 0;
+let monthInterest;
+
+for (i=1;i<(loanTerm*12)+1;i++){
+    debt *=intRate;
+    // debt += monthInterest;
+   // console.log('debt after interest ' + debt);
+    debt-=monthlyRepayment;
+   // console.log('debt after payment ' + debt);
+   
+    monthEquity = mortgageAmount-debt;
+    //console.log(debt);
+    console.log(`after ${i} months you have ${Math.floor(monthEquity*100)/100} in equity`);
+}
